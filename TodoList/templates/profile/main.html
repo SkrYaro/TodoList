@@ -1,0 +1,17 @@
+{%extends "base/base.html" %}
+{%block content%}
+<h1>{{user.username}}</h1>
+
+<img src="{{profile.ava.url}}">
+
+{%for task in tasks%}
+    <div class="container">
+    <b>{{task.name}}</b>
+    <br>
+    <b> priority- {{task.level_important}}</b>
+    <br>
+    <b>from {{task.time_start}} to {{task.time_end}}</b>
+    </div>
+{%endfor%}
+
+{%endblock%}
